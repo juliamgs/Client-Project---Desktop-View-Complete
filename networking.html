@@ -108,9 +108,9 @@
     </p>
   </footer>
 
- <!-- JAVA -->
+ <!-- JAVA SCRIPT -->
 <script>
-    // Dynamic Footer - Current Year
+    // Footer - Current Year
     document.addEventListener('DOMContentLoaded', function() {
         const currentYear = new Date().getFullYear();
         const footerText = document.querySelector('footer p');
@@ -118,7 +118,6 @@
         if (footerText) {
             footerText.textContent = `© ${currentYear} University of Michigan School of Information | `;
             
-            // Create and append the link
             const link = document.createElement('a');
             link.href = 'https://umich.instructure.com/courses/137916';
             link.textContent = 'UMSI Career Development Office';
@@ -126,27 +125,22 @@
         }
     });
 
-    // Dark Mode Toggle with LocalStorage - WCAG AA Compliant
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
     const themeText = document.getElementById('themeText');
     const body = document.body;
     
-    // Check for saved theme preference or default to light mode
     const currentTheme = localStorage.getItem('theme') || 'light';
     
-    // Apply saved theme on page load
     if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
         themeIcon.textContent = '🌙';
         themeText.textContent = 'Dark';
     }
-    
-    // Toggle theme function
+
     function toggleTheme() {
         body.classList.toggle('dark-mode');
         
-        // Update the theme and save preference
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
             themeIcon.textContent = '🌙';
@@ -158,10 +152,8 @@
         }
     }
     
-    // Add click event listener
     themeToggle.addEventListener('click', toggleTheme);
     
-    // Add keyboard accessibility (Enter and Space keys)
     themeToggle.addEventListener('keypress', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();

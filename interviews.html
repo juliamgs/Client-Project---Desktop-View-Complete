@@ -57,7 +57,16 @@
             <p>
                 This is a webinar featuring Neil Jairath, who graduated first in his class from University of Michigan Medical School and served as an admissions representative and interviewer for three years. In the video, he shares his expert insights and strategies for acing medical school interviews based on his experience on both sides of the admissions process.
             </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/yxKwIB1bYyA?si=dIaaZuiB1K_LcsKF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/yxKwIB1bYyA?si=dIaaZuiB1K_LcsKF" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                style="border: none;"
+            ></iframe>
         </section>
 
         <section class="interview-takeaways">
@@ -95,9 +104,9 @@
     <footer>
         <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office</a></p>
     </footer>
- <!-- JAVA -->
+ <!-- JAVA SCRIPT-->
 <script>
-    // Dynamic Footer - Current Year
+    //  Footer - Current Year
     document.addEventListener('DOMContentLoaded', function() {
         const currentYear = new Date().getFullYear();
         const footerText = document.querySelector('footer p');
@@ -105,7 +114,6 @@
         if (footerText) {
             footerText.textContent = `© ${currentYear} University of Michigan School of Information | `;
             
-            // Create and append the link
             const link = document.createElement('a');
             link.href = 'https://umich.instructure.com/courses/137916';
             link.textContent = 'UMSI Career Development Office';
@@ -117,27 +125,22 @@
 
  <!-- DARK MODE TOGGLE SCRIPT -->
 <script>
-    // Dark Mode Toggle with LocalStorage - WCAG AA Compliant
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
     const themeText = document.getElementById('themeText');
     const body = document.body;
     
-    // Check for saved theme preference or default to light mode
     const currentTheme = localStorage.getItem('theme') || 'light';
     
-    // Apply saved theme on page load
     if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
         themeIcon.textContent = '🌙';
         themeText.textContent = 'Dark';
     }
     
-    // Toggle theme function
     function toggleTheme() {
         body.classList.toggle('dark-mode');
         
-        // Update the theme and save preference
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
             themeIcon.textContent = '🌙';
@@ -149,10 +152,8 @@
         }
     }
     
-    // Add click event listener
     themeToggle.addEventListener('click', toggleTheme);
     
-    // Add keyboard accessibility (Enter and Space keys)
     themeToggle.addEventListener('keypress', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();

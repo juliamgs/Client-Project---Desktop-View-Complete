@@ -486,21 +486,10 @@ img, iframe, video {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* DESKTOP VIEW */
 @media (min-width: 768px) {
     
-    /* HEADER LAYOUT - Full width with logo on left, nav stretched on right */
+    /* HEADER LAYOUT*/
     header {
         display: flex;
         flex-wrap: wrap;
@@ -514,13 +503,12 @@ img, iframe, video {
         margin: 0;
     }
     
-    /* HORIZONTAL NAVIGATION - Stretched to fill space but not too far right */
     nav {
         flex: 1;
         margin: 0;
         display: flex;
         justify-content: flex-end;
-        margin-right: 100px; /* Space for dark mode button */
+        margin-right: 100px; /* space for dark mode button */
     }
     
     nav ul {
@@ -546,7 +534,7 @@ img, iframe, video {
         text-align: center;
     }
     
-    /* H1 spans full width below logo and nav */
+    /* H1 spans full width */
     header h1 {
         width: 100%;
         text-align: center;
@@ -555,12 +543,12 @@ img, iframe, video {
         order: 3;
     }
     
-    /* MAIN CONTAINER - Better spacing */
+    /* MAIN CONTAINER*/
     main {
         padding: 60px 80px;
     }
     
-    /* HOME PAGE LAYOUT - Better use of space */
+    /* HOME PAGE LAYOUT */
     .intro {
         grid-column: 1 / -1;
         grid-row: 1;
@@ -624,7 +612,7 @@ img, iframe, video {
         margin-top: 40px;
     }
     
-    /* NETWORKING PAGE LAYOUT - Side by side */
+    /* NETWORKING PAGE LAYOUT */
     .networking-intro {
         grid-column: 1 / 3;
         grid-row: 1;
@@ -678,7 +666,7 @@ img, iframe, video {
         margin-top: 40px;
     }
     
-    /* RESUME PAGE LAYOUT - Better columns */
+    /* RESUME PAGE LAYOUT */
     .resume-intro {
         grid-column: 1 / -1;
         grid-row: 1;
@@ -774,7 +762,6 @@ img, iframe, video {
         gap: 30px;
     }
     
-    /* BETTER TYPOGRAPHY FOR LARGER SCREENS */
     h2 {
         font-size: 2em;
         margin-bottom: 25px;
@@ -794,7 +781,6 @@ img, iframe, video {
         line-height: 1.8;
     }
     
-    /* Better spacing for sections */
     section {
         margin-bottom: 50px;
     }
@@ -828,7 +814,7 @@ img, iframe, video {
         padding: 35px;
     }
     
-    /* DARK MODE TOGGLE BUTTON POSITION */
+    /* DARK MODE TOGGLE BUTTON  */
     .theme-toggle-container {
         top: 30px;
         right: 40px;
