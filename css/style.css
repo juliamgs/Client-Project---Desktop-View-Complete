@@ -1,0 +1,1372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+}
+
+/* skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: -65px;
+  opacity: 1;
+  color: #FFCB05;
+  background-color: #00274C;
+  padding: 10px 15px;
+  text-decoration: none;
+  z-index: 9999;
+  border: 2px solid #FFCB05;
+  border-radius: 5px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  outline: 2px solid #FFCB05;
+}
+
+/* header styles - dark blue background */
+header {
+    background-color: #00274C;
+    padding: 30px 40px 40px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+/* nav styles - large buttons */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+nav li {
+    margin: 15px 0;
+}
+
+nav li a {
+    display: block;
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #FFCB05;
+    color: #00274C;
+}
+
+nav li a:hover {
+    opacity: 0.9;
+}
+
+nav li a.active {
+    background-color: #00274C;
+    color: #FFCB05;
+    border: 4px solid #FFCB05;
+    opacity: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* main heading*/
+header h1 {
+    color: #FFCB05;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* main content */
+main {
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* section headings */
+h2 {
+    color: #00274C;
+    font-size: 1.8em;
+    margin: 0 0 20px;
+    font-weight: bold;
+    padding-bottom: 12px;
+    border-bottom: 5px solid #FFCB05;
+}
+
+h3 {
+    color: #000;
+    font-size: 1.4em;
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+
+/* intro section */
+.intro-section {
+    margin-bottom: 50px;
+}
+
+.intro-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 560px;
+    margin: 30px 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+}
+
+/* why use this section */
+.why-section {
+    margin-bottom: 50px;
+}
+
+.why-section ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.why-section li {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 30px;
+}
+
+.why-section ul {
+    list-style-type: disc; 
+    padding-left: 40px;
+    margin: 25px 0;
+}
+
+.why-section strong {
+    font-weight: bold;
+    color: #000;
+}
+
+/* start section */
+.start-section {
+    margin: 50px 0;
+}
+
+.feature-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 30px 0;
+    display: block;
+}
+
+.start-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.start-links li {
+    margin: 10px 0;
+}
+
+.start-links a {
+    color: #0000EE;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+
+.start-links a:hover {
+    color: #551A8B;
+}
+
+/*popular sources*/
+.popular-resources {
+    margin: 50px 0;
+}
+
+.popular-resources h3 {
+    margin-top: 0;
+}
+
+.popular-resources ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.popular-resources li {
+    margin: 12px 0;
+}
+
+.popular-resources a {
+    color: #0000EE;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+
+.popular-resources a:hover {
+    color: #551A8B;
+}
+
+/* connect section*/
+.connect-section {
+    margin: 50px 0;
+}
+
+.connect-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.connect-section a {
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+.connect-section a:hover {
+    color: #551A8B;
+}
+
+/*footer*/
+footer {
+    background-color: #00274C;
+    color: #FFCB05;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+footer a {
+    color: #FFCB05;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* GRID LAYOUTS */
+
+/* main container grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+/* intro section */
+.intro {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+/* why section */
+.why {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.why-image {
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+/* start section*/
+.start {
+    grid-column: 1 / -1;
+    grid-row: 4;
+}
+
+.start-image {
+    grid-column: 1 / -1;
+    grid-row: 5;
+}
+
+/* popular resources*/
+.popular-resources {
+    grid-column: 1 / -1;
+    grid-row: 6;
+}
+
+.popular-resources-image {
+    grid-column: 1 / -1;
+    grid-row: 7;
+}
+
+/* CDO info section*/
+.cdo-info {
+    grid-column: 1 / -1;
+    grid-row: 8;
+}
+
+.cdo-info-image {
+    grid-column: 1 / -1;
+    grid-row: 9;
+}
+
+/* connect section */
+.connect-section {
+    grid-column: 1 / -1;
+    grid-row: 10;
+}
+
+.connect-section-image {
+    grid-column: 1 / -1;
+    grid-row: 11;
+}
+
+/* networking sections */
+.networking-intro {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.networking-intro-image {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.networking-relationships {
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+.networking-relationships-image {
+    grid-column: 1 / -1;
+    grid-row: 4;
+}
+
+.networking-where {
+    grid-column: 1 / -1;
+    grid-row: 5;
+}
+
+.networking-start {
+    grid-column: 1 / -1;
+    grid-row: 6;
+}
+
+.networking-start-image {
+    grid-column: 1 / -1;
+    grid-row: 7;
+}
+
+/* resume sections*/
+.resume-intro {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.resume-steps {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.resume-resources {
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+.resume-faq {
+    grid-column: 1 / -1;
+    grid-row: 4;
+}
+
+.resume-video {
+    grid-column: 1 / -1;
+    grid-row: 5;
+}
+
+.resume-vmock {
+    grid-column: 1 / -1;
+    grid-row: 6;
+}
+
+/* interview sections  */
+.interview-intro {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.interview-intro-image {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.interview-video {
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+.interview-takeaways {
+    grid-column: 1 / -1;
+    grid-row: 4;
+}
+
+/* text block styling */
+.text-block {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.text-block li {
+    text-align: left;
+}
+
+/* styles for lists: networking sections */
+.networking-where ul,
+.networking-relationships p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+.networking-where ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin: 20px 0;
+}
+
+.networking-where li {
+    margin-bottom: 10px;
+}
+
+/* image sizing */
+.why-image img, .start-image img, .popular-resources-image img, 
+.cdo-info-image img, .connect-section-image img,
+.networking-intro-image img, .networking-relationships-image img, 
+.networking-start-image img, .interview-intro-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/* prevent content overflow */
+section, aside, .intro, .intro-section, .why, .why-section, 
+.start, .start-section, .cdo-info, .connect-section, 
+.popular-resources, .takeaways, .steps, .resources, .faq, 
+.video, .video-section, .vmock {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* double check images don't overflow */
+img, iframe, video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP VIEW */
+@media (min-width: 768px) {
+    
+    /* HEADER LAYOUT - Full width with logo on left, nav stretched on right */
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px 60px;
+        gap: 20px;
+    }
+    
+    .logo {
+        max-width: 100px;
+        margin: 0;
+    }
+    
+    /* HORIZONTAL NAVIGATION - Stretched to fill space but not too far right */
+    nav {
+        flex: 1;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 100px; /* Space for dark mode button */
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+    }
+    
+    nav li {
+        margin: 0;
+        flex: 1;
+    }
+    
+    nav li a {
+        padding: 14px 20px;
+        font-size: 1em;
+        white-space: nowrap;
+        display: block;
+        text-align: center;
+    }
+    
+    /* H1 spans full width below logo and nav */
+    header h1 {
+        width: 100%;
+        text-align: center;
+        margin-top: 25px;
+        font-size: 2.5em;
+        order: 3;
+    }
+    
+    /* MAIN CONTAINER - Better spacing */
+    main {
+        padding: 60px 80px;
+    }
+    
+    /* HOME PAGE LAYOUT - Better use of space */
+    .intro {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .intro p {
+        max-width: 100%;
+    }
+    
+    .intro iframe {
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+        margin: 30px auto;
+    }
+    
+    .why {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-bottom: 40px;
+    }
+    
+    /* Start section with image side by side */
+    .start {
+        grid-column: 1 / 3;
+        grid-row: 3;
+        padding-right: 40px;
+    }
+    
+    .start-image {
+        grid-column: 3 / 6;
+        grid-row: 3;
+        display: flex;
+        align-items: center;
+    }
+    
+    .start-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    /* Popular resources at bottom */
+    .popular-resources {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        background-color: #f5f5f5;
+        padding: 40px;
+        border-radius: 8px;
+        margin-top: 40px;
+    }
+    
+    .cdo-info {
+        grid-column: 1 / -1;
+        grid-row: 5;
+        margin-top: 40px;
+    }
+    
+    /* NETWORKING PAGE LAYOUT - Side by side */
+    .networking-intro {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        padding-right: 40px;
+    }
+    
+    .networking-intro-image {
+        grid-column: 3 / 6;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+    }
+    
+    .networking-intro-image img {
+        border-radius: 8px;
+    }
+    
+    .networking-relationships {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .networking-where {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        margin-bottom: 40px;
+    }
+    
+    .networking-start {
+        grid-column: 1 / 3;
+        grid-row: 4;
+        padding-right: 40px;
+    }
+    
+    .networking-start-image {
+        grid-column: 3 / 6;
+        grid-row: 4;
+        display: flex;
+        align-items: center;
+    }
+    
+    .networking-start-image img {
+        border-radius: 8px;
+    }
+    
+    .connect-section {
+        grid-column: 1 / -1;
+        grid-row: 6;
+        margin-top: 40px;
+    }
+    
+    /* RESUME PAGE LAYOUT - Better columns */
+    .resume-intro {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin-bottom: 40px;
+    }
+    
+    .resume-steps {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-bottom: 40px;
+    }
+    
+    .resume-resources {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        margin-bottom: 40px;
+    }
+    
+    .resume-faq {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        margin-bottom: 40px;
+    }
+    
+    .resume-video {
+        grid-column: 1 / -1;
+        grid-row: 5;
+        margin-bottom: 40px;
+    }
+    
+    .resume-video iframe {
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+        display: block;
+        margin: 20px auto;
+    }
+    
+    .resume-vmock {
+        grid-column: 1 / -1;
+        grid-row: 6;
+        margin-bottom: 40px;
+    }
+    
+    /* INTERVIEWS PAGE LAYOUT */
+    .interview-intro {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        padding-right: 40px;
+    }
+    
+    .interview-intro-image {
+        grid-column: 3 / 6;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+    }
+    
+    .interview-intro-image img {
+        border-radius: 8px;
+    }
+    
+    .interview-video {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .interview-video p {
+        max-width: 100%;
+    }
+    
+    .interview-video iframe {
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+        margin: 30px auto;
+    }
+    
+    .interview-takeaways {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        margin-bottom: 40px;
+    }
+    
+    /* TWO COLUMN LIST LAYOUTS */
+    .why ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    /* BETTER TYPOGRAPHY FOR LARGER SCREENS */
+    h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+    }
+    
+    p {
+        font-size: 1.05em;
+        line-height: 1.8;
+    }
+    
+    li {
+        font-size: 1.05em;
+        line-height: 1.8;
+    }
+    
+    /* Better spacing for sections */
+    section {
+        margin-bottom: 50px;
+    }
+    
+    /* 404 PAGE DESKTOP STYLES */
+    .error-404 {
+        padding: 60px 40px;
+    }
+
+    .error-options {
+        padding: 40px;
+    }
+
+    .error-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .error-button {
+        display: block;
+        padding: 20px;
+        font-size: 1.2em;
+    }
+
+    .error-resources {
+        padding: 40px;
+    }
+
+    .error-contact {
+        padding: 35px;
+    }
+    
+    /* DARK MODE TOGGLE BUTTON POSITION */
+    .theme-toggle-container {
+        top: 30px;
+        right: 40px;
+    }
+    
+    .theme-toggle-btn {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile styles for 404 page */
+.error-404 {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.error-message {
+    font-size: 1.2em;
+    color: #555;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+.error-help {
+    font-size: 1.1em;
+    margin: 30px 0 20px;
+    font-weight: bold;
+}
+
+.error-options {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.error-options h3 {
+    color: #00274C;
+    margin-bottom: 25px;
+}
+
+.error-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.error-links li {
+    margin: 15px 0;
+}
+
+.error-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FFCB05;
+    color: #00274C;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: opacity 0.3s ease;
+}
+
+.error-button:hover {
+    opacity: 0.85;
+}
+
+.error-resources {
+    margin: 40px 0;
+    text-align: left;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.error-resources h3 {
+    color: #00274C;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.error-resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.error-resources li {
+    margin: 12px 0;
+}
+
+.error-resources a {
+    color: #0000EE;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+
+.error-resources a:hover {
+    color: #551A8B;
+}
+
+.error-contact {
+    margin: 40px 0 20px;
+    padding: 25px;
+    background-color: #00274C;
+    color: #FFCB05;
+    border-radius: 8px;
+}
+
+.error-contact p {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.error-contact a {
+    color: #FFCB05;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.error-contact a:hover {
+    opacity: 0.8;
+}
+
+/* Desktop styles for 404 page */
+@media (min-width: 768px) {
+    .error-404 {
+        padding: 60px 40px;
+    }
+
+    .error-options {
+        padding: 40px;
+    }
+
+    .error-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .error-button {
+        display: block;
+        padding: 20px;
+        font-size: 1.2em;
+    }
+
+    .error-resources {
+        padding: 40px;
+    }
+
+    .error-contact {
+        padding: 35px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .error-links {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== ACCESSIBLE DARK MODE FEATURE ===== */
+
+/* CSS Variables for Light Mode (default) */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --header-bg: #00274C;
+    --header-text: #FFCB05;
+    --nav-bg: #FFCB05;
+    --nav-text: #00274C;
+    --nav-active-bg: #00274C;
+    --nav-active-text: #FFCB05;
+    --border-color: #FFCB05;
+    --link-color: #0000EE;
+    --link-hover: #551A8B;
+    --section-bg: #f9f9f9;
+}
+
+/* CSS Variables for Dark Mode - All colors meet WCAG AA standards */
+body.dark-mode {
+    --bg-primary: #0a1929;
+    --bg-secondary: #1a2332;
+    --text-primary: #e8eaf6;
+    --text-secondary: #b0b8c4;
+    --header-bg: #001a33;
+    --header-text: #FFD700;
+    --nav-bg: #1e3a5f;
+    --nav-text: #FFD700;
+    --nav-active-bg: #FFD700;
+    --nav-active-text: #001a33;
+    --border-color: #FFD700;
+    --link-color: #a8c7ff;      /* improve contrast */
+    --link-hover: #c5d9ff;      /* improve contrast */
+    --section-bg: #141f2e;
+}
+
+body.dark-mode a {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+body.dark-mode a:hover {
+    color: var(--link-hover);
+}
+
+/* Make sure popular resources links have sufficient contrast */
+body.dark-mode .popular-resources a {
+    color: var(--link-color);
+    font-weight: 500;
+}
+
+body.dark-mode .popular-resources a:hover {
+    color: var(--link-hover);
+}
+
+/* Ensure all link areas have good contrast */
+body.dark-mode .start-links a,
+body.dark-mode .error-resources a {
+    color: var(--link-color);
+}
+
+body.dark-mode .start-links a:hover,
+body.dark-mode .error-resources a:hover {
+    color: var(--link-hover);
+}
+
+
+/* Apply variables to existing elements */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg);
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    color: var(--header-text);
+    transition: color 0.3s ease;
+}
+
+/* Navigation */
+nav li a {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    transition: all 0.3s ease;
+}
+
+nav li a.active {
+    background-color: var(--nav-active-bg);
+    color: var(--nav-active-text);
+    border-color: var(--border-color);
+}
+
+/* Headings */
+h2 {
+    color: var(--text-primary);
+    border-bottom-color: var(--border-color);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+h3 {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+/* Sections with background */
+.popular-resources,
+.error-resources,
+.error-options {
+    background-color: var(--bg-secondary);
+    transition: background-color 0.3s ease;
+}
+
+/* Footer */
+footer {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    transition: all 0.3s ease;
+}
+
+footer a {
+    color: var(--header-text);
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode Toggle Button Styles */
+.theme-toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle-btn {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    border: 2px solid var(--border-color);
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.theme-toggle-btn:focus {
+    outline: 3px solid var(--border-color);
+    outline-offset: 2px;
+}
+
+.theme-icon {
+    font-size: 1.2em;
+}
+
+/* ===== 404 Page DARK MODE STYLING ===== */
+
+/* Main container */
+.error-404 {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  text-align: center;
+  padding: 60px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Headings */
+.error-404 h1,
+.error-404 h2,
+.error-404 h3 {
+  color: var(--header-text);
+}
+
+/* Paragraphs and body text */
+.error-404 p {
+  color: var(--text-secondary);
+}
+
+/* Buttons (Return Home, Resume Support, etc.) */
+.error-button {
+  background-color: var(--nav-active-bg);
+  color: var(--nav-active-text);
+  border: 2px solid var(--border-color);
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.error-button:hover {
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+  transform: scale(1.05);
+}
+
+/* Resources section (Popular Resources, etc.) */
+.error-resources {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 40px;
+  margin-top: 40px;
+  color: var(--text-primary);
+}
+
+.error-resources h3 {
+  color: var(--header-text);
+}
+
+.error-resources a {
+  color: var(--link-color);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.error-resources a:hover {
+  color: var(--link-hover);
+}
+
+/* Contact/help section */
+.error-contact {
+  background-color: var(--section-bg);
+  color: var(--text-secondary);
+  border-top: 2px solid var(--border-color);
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.error-contact a {
+  color: var(--link-color);
+  font-weight: 500;
+}
+
+.error-contact a:hover {
+  color: var(--link-hover);
+}
+
+/* ===== 404 Page Light Mode Color Adjustments ===== */
+
+/* --- LIGHT MODE FIXES --- */
+body:not(.dark-mode) .error-404 h1,
+body:not(.dark-mode) .error-404 h2,
+body:not(.dark-mode) .error-404 h3 {
+  color: #00274C; /* navy text on white background */
+}
+
+body:not(.dark-mode) .error-button {
+  background-color: #00274C; /* dark navy button */
+  color: #FFCB05; /* maize text */
+  border: 2px solid #00274C;
+}
+
+body:not(.dark-mode) .error-button:hover {
+  background-color: #FFCB05;
+  color: #00274C;
+}
+
+/* Fix "Popular Resources" section heading color */
+body:not(.dark-mode) .error-resources h3 {
+  color: #00274C; /* navy instead of yellow */
+}
+
+/* Fix contact/help text color */
+body:not(.dark-mode) .error-contact {
+  color: #333333;
+}
+
+/* --- DARK MODE COLORS REMAIN THE SAME --- */
+body.dark-mode .error-404 h1,
+body.dark-mode .error-404 h2,
+body.dark-mode .error-404 h3 {
+  color: var(--header-text);
+}
+
+body.dark-mode .error-button {
+  background-color: var(--nav-active-bg);
+  color: var(--nav-active-text);
+  border: 2px solid var(--border-color);
+}
+
+body.dark-mode .error-button:hover {
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+}
+
+body.dark-mode .error-resources h3 {
+  color: var(--header-text);
+}
+
+
+/* Dark mode specific adjustments */
+body.dark-mode .popular-resources {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .error-contact {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+}
+
+body.dark-mode .error-button {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+}
+
+body.dark-mode .error-button:hover {
+    background-color: var(--border-color);
+    color: var(--nav-active-text);
+}
+
+
+@media (min-width: 768px) {
+    
+    .theme-toggle-btn {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .theme-toggle-container {
+        top: 30px;
+        right: 40px;
+    }
+
+    .resume-vmock{
+        grid-row-start: 6;
+    }
+
+     .connect-section{
+        grid-row-start: 7;
+    }
+
+    .popular-resources{
+        grid-row-start: 6;
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>404 - Page Not Found | UMSI Career Development Resource Hub</title>
+</head>
+<body>
+
+<!-- DARK MODE TOGGLE BUTTON -->
+<div class="theme-toggle-container">
+    <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="theme-icon" id="themeIcon">☀️</span>
+        <span id="themeText">Light</span>
+    </button>
+</div>
+
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <header>
+        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resumes</a></li>
+                <li><a href="networking.html">Networking</a></li>
+                <li><a href="interviews.html">Interviews</a></li>
+            </ul>
+        </nav>
+        <h1>404 - Page Not Found</h1>
+    </header>
+
+    <main class="container" id="main-content">
+        <section class="error-404">
+            <h2>Oops! We Can't Find That Page</h2>
+            <p class="error-message">
+                The page you're looking for might have been moved, deleted, or the URL may have been mistyped.
+            </p>
+            <p class="error-help">
+                Don't worry—we're here to help you find what you need! Try one of these options:
+            </p>
+            
+            <div class="error-options">
+                <h3>Where Would You Like To Go?</h3>
+                <ul class="error-links">
+                    <li><a href="index.html" class="error-button">Return to Home Page</a></li>
+                    <li><a href="resume.html" class="error-button">Resume Support</a></li>
+                    <li><a href="networking.html" class="error-button">Networking Resources</a></li>
+                    <li><a href="interviews.html" class="error-button">Interview Preparation</a></li>
+                </ul>
+            </div>
+
+            <div class="error-resources">
+                <h3>Popular Resources</h3>
+                <ul>
+                    <li><a href="https://docs.google.com/document/d/1_1GfDJyVGIgE82MZjVhuWT_aB_2Hcj1NN62FUCXoR_o/edit?tab=t.0" target="_blank">UMSI Resume Guide</a></li>
+                    <li><a href="https://www.si.umich.edu/about-umsi/events" target="_blank">Attend a Career Event</a></li>
+                    <li><a href="https://docs.google.com/document/d/1cwq2KtdKQbO-tICHKUyKRA3QY4_3VJ8NLC2kwPBY4dI/edit?tab=t.0" target="_blank">Networking Tips</a></li>
+                    <li><a href="https://si-umich.12twenty.com/dashboard/" target="_blank">Career Link: UMSI's Exclusive Career Portal</a></li>
+                </ul>
+            </div>
+
+            <div class="error-contact">
+                <p>
+                    <strong>Still need help?</strong> Contact the UMSI Career Development Office at 
+                    <a href="https://www.si.umich.edu/programs/career-development-office" target="_blank">our website</a> 
+                    or visit us on campus.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office</a></p>
+    </footer>
+ <!-- JAVA -->
+<script>
+    // Dynamic Footer - Current Year
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentYear = new Date().getFullYear();
+        const footerText = document.querySelector('footer p');
+        
+        if (footerText) {
+            footerText.textContent = `© ${currentYear} University of Michigan School of Information | `;
+            
+            // Create and append the link
+            const link = document.createElement('a');
+            link.href = 'https://umich.instructure.com/courses/137916';
+            link.textContent = 'UMSI Career Development Office';
+            footerText.appendChild(link);
+        }
+    });
+
+    // Dark Mode Toggle with LocalStorage - WCAG AA Compliant
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    
+    // Apply saved theme on page load
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeIcon.textContent = '🌙';
+        themeText.textContent = 'Dark';
+    }
+    
+    // Toggle theme function
+    function toggleTheme() {
+        body.classList.toggle('dark-mode');
+        
+        // Update the theme and save preference
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            themeIcon.textContent = '🌙';
+            themeText.textContent = 'Dark';
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeIcon.textContent = '☀️';
+            themeText.textContent = 'Light';
+        }
+    }
+    
+    // Add click event listener
+    themeToggle.addEventListener('click', toggleTheme);
+    
+    // Add keyboard accessibility (Enter and Space keys)
+    themeToggle.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleTheme();
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/html5reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>UMSI Career Development Resource Hub — Networking</title>
+</head>
+<body>
+
+<!-- DARK MODE TOGGLE BUTTON -->
+<div class="theme-toggle-container">
+    <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="theme-icon" id="themeIcon">☀️</span>
+        <span id="themeText">Light</span>
+    </button>
+</div>
+
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <header>
+    <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resumes</a></li>
+        <li><a href="networking.html" class="active">Networking</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
+      </ul>
+    </nav>
+    <h1>Networking Hub</h1>
+  </header>
+
+  <main class="container" id="main-content">
+
+    <section class="networking-intro">
+      <h2>Networking and Professional Connections</h2>
+      <p>
+        Networking is about building relationships and getting to know people in positions and career areas of interest.
+        It has always been an important job and internship strategy. Networking conversations can happen in person,
+        over the phone, or online through platforms like Zoom.
+      </p>
+    </section>
+
+    <div class="networking-intro-image">
+      <img src="images/umsi_careerfair.networking.jpg" alt="Man and woman conversing" class="feature-image">
+    </div>
+
+    <section class="networking-relationships">
+      <h2>Networking is Building Relationships</h2>
+      <p><strong>Leverage:</strong> your circle of friends, family, professors, previous employers, and U-M alumni.</p>
+      <p><strong>Be curious:</strong> about the person you are connecting with to learn more about their career.
+        Networking isn't about asking for favors — it's about learning and building authentic professional relationships.
+      </p>
+    </section>
+
+    <section class="networking-where">
+      <h2>Where Does It Happen?</h2>
+      <p>
+        Networking conversations can happen in person, over the phone, or online through platforms like Zoom. Some common places include:
+      </p>
+      <ul>
+        <li>In one-on-one conversations with alumni on <a href="https://umich.peoplegrove.com/v2/" target="_blank">UCAN (University Career Alumni Network)</a> - This UCC resource is an EASY way to connect with alumni who have volunteered to offer career expertise.</li>
+        <li>LinkedIn is another great tool - one you can use to showcase yourself and your career interests. Find out more on <a href="https://www.linkedin.com/help/linkedin/answer/a554351/how-do-i-create-a-good-linkedin-profile-?lang=en" target="_blank">building strong profiles</a>.</li>
+        <li>Information sessions, panels and networking events with professionals - There are information sessions, networking hours, and 'coffee chats' all planned with you in mind. Set reminders to check out the "Events Page" on <a href="https://umich.joinhandshake.com/reonboarding/confirm-details?requested_page=%2Fstu%2Fevents" target="_blank">Handshake</a> each week for the latest additions.</li>
+        <li>At <a href="https://careercenter.umich.edu/article/immersions-tcc" target="_blank">Immersions</a> - Travel to employer sites to learn more about their organization and network with their team.</li>
+      </ul>
+    </section>
+
+    <section class="networking-start">
+      <h2>Start Here</h2>
+      <p>
+        Attend campus events, career fairs, and join student organizations to practice networking. Start small, introduce
+        yourself, and ask thoughtful questions about others' experiences.
+      </p>
+    </section>
+
+    <div class="networking-start-image">
+      <img src="images/UMSI_networking(2).jpg" alt="A group of students talking around a table" class="feature-image">
+    </div>
+
+    <aside class="popular-resources">
+      <h3>Most Popular Resources</h3>
+      <ul>
+        <li><a href="https://umich.peoplegrove.com/v2/" target="_blank">UCAN (University Career Alumni Network)</a></li>
+        <li><a href="https://www.linkedin.com/help/linkedin/answer/a554351/how-do-i-create-a-good-linkedin-profile-?lang=en" target="_blank">Building Strong LinkedIn Profiles</a></li>
+        <li><a href="https://umich.joinhandshake.com/reonboarding/confirm-details?requested_page=%2Fstu%2Fevents" target="_blank">Handshake Events Page</a></li>
+        <li><a href="https://careercenter.umich.edu/article/immersions-tcc" target="_blank">Immersions - Employer Site Visits</a></li>
+      </ul>
+    </aside>
+
+    <section class="connect-section">
+      <h2>Connect with the UMSI Career Development Office</h2>
+      <p>
+        The UMSI Career Development Office (CDO) offers personalized support through appointments, events, and resource guides.
+        <a href="https://umsi.umich.edu/cdo" target="_blank">Visit the CDO website</a> or
+        <a href="https://umsi.umich.edu/cdo/contact" target="_blank">find us on campus</a> to learn more, schedule a coaching
+        session, or just say hello.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>University of Michigan School of Information |
+      <a href="https://umsi.umich.edu/cdo" target="_blank">UMSI Career Development Office</a>
+    </p>
+  </footer>
+
+ <!-- JAVA -->
+<script>
+    // Dynamic Footer - Current Year
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentYear = new Date().getFullYear();
+        const footerText = document.querySelector('footer p');
+        
+        if (footerText) {
+            footerText.textContent = `© ${currentYear} University of Michigan School of Information | `;
+            
+            // Create and append the link
+            const link = document.createElement('a');
+            link.href = 'https://umich.instructure.com/courses/137916';
+            link.textContent = 'UMSI Career Development Office';
+            footerText.appendChild(link);
+        }
+    });
+
+    // Dark Mode Toggle with LocalStorage - WCAG AA Compliant
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    
+    // Apply saved theme on page load
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeIcon.textContent = '🌙';
+        themeText.textContent = 'Dark';
+    }
+    
+    // Toggle theme function
+    function toggleTheme() {
+        body.classList.toggle('dark-mode');
+        
+        // Update the theme and save preference
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            themeIcon.textContent = '🌙';
+            themeText.textContent = 'Dark';
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeIcon.textContent = '☀️';
+            themeText.textContent = 'Light';
+        }
+    }
+    
+    // Add click event listener
+    themeToggle.addEventListener('click', toggleTheme);
+    
+    // Add keyboard accessibility (Enter and Space keys)
+    themeToggle.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleTheme();
+        }
+    });
+</script>
+
+</body>
+</html>
